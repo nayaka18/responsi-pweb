@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skincare Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</head>
+<body>
+    <h1 id="welcome-heading">Selamat datang di Skincare Shop Nayaka</h1>
+    <h2 id="hello-heading">Silahkan pilih paket skincare anda!</h2>
+    <!--<p>Silahkan pilih paket skincare anda</p>-->
+    
+    <div class="product">
+        <img src="skincare1.jpg" alt="Skincare Package 1">
+        <h2>Paket Skincare 1</h2>
+        <p>Harga Mulai: Rp50.000</p>
+        <button onclick="order('Skincare Package 1', 'Rp50.000')">Order Now</button>
+        <div class="popup">Deskripsi Paket Skincare 1: Cocok untuk kulit kering dan sensitif.</div>
+    </div>
+    <div class="product">
+        <img src="skincare 2.jpg" alt="Skincare Package 2">
+        <h2>Paket Skincare 2</h2>
+        <p>Harga Mulai: Rp75.000</p>
+        <button onclick="order('Skincare Package 2', 'Rp75.000')">Order Now</button>
+        <div class="popup">Deskripsi Paket Skincare 2: Membantu mencerahkan kulit wajah.</div>
+    </div>
+    <div class="product">
+        <img src="skincare4.jpg" alt="Skincare Package 3">
+        <h2>Paket Skincare 3</h2>
+        <p>Harga Mulai: Rp100.000</p>
+        <button onclick="order('Skincare Package 3', 'Rp100.000')">Order Now</button>
+        <div class="popup">Deskripsi Paket Skincare 3: Anti-aging untuk kulit lebih muda dan sehat.</div>
+    </div>
+    <h2 id="hello-heading">Jangan lupa untuk inputkan data diri beserta No telepon ya !</h2>
+    <div id="formPesan" class="modal">
+        <div class="modal-content">
+            <span class="tutup" onclick="tutupForm()">&times;</span>
+            <form action="order.php" method="post">
+                <h2 id="judulProduk"></h2>
+                <input type="hidden" id="namaProduk" name="produk">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+                <label for="telepon">Nomor Telepon:</label>
+                <input type="text" id="telepon" name="telepon" required>
+                <button type="submit">Kirim</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
